@@ -1,0 +1,178 @@
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #9ac4ff, #c4defa);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #2dcae2, black);
+  color: white;
+  padding: 1.5em 1em;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Navigation */
+nav {
+  margin-top: 1em;
+}
+
+nav button {
+  margin: 0.4em;
+  padding: 0.7em 1.2em;
+  border: none;
+  border-radius: 20px;
+  background: #ff6a00;
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+nav button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ee0979, #ff6a00);
+}
+
+/* Layout */
+main {
+  padding: 2em;
+}
+
+/* Section Display Control */
+.content-section {
+  display: none;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.content-section.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards */
+.card {
+  background: #ffffffcc;
+  border-radius: 12px;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Input Styles */
+input[type="text"] {
+  padding: 0.6em;
+  width: 70%;
+  max-width: 400px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 1em;
+  font-size: 1em;
+}
+
+/* To-Do List */
+ul#todo-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1em;
+}
+
+ul#todo-list li {
+  background: #fefefe;
+  padding: 0.7em 1em;
+  margin: 0.5em 0;
+  border-left: 6px solid #ee0979;
+  border-radius: 6px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+ul#todo-list li:hover {
+  background: #fff5f5;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+/* Filters & Select */
+.filters {
+  margin: 1em 0;
+}
+
+select {
+  padding: 0.6em;
+  margin-right: 1em;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 1em;
+}
+
+/* Product Listing */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1em;
+}
+
+.product-card {
+  background: linear-gradient(to top, #ffffff, #f1f2f6);
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(to top, #fefefe, #e0e0e0);
+}
+
+/* Portfolio Enhancements */
+.card.colorful {
+  background: linear-gradient(to right, #ffffff, #e0c3fc);
+  border-left: 6px solid #8e2de2;
+  border-radius: 12px;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Project Grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1em;
+}

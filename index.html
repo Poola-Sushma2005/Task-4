@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Developer Projects</h1>
+    <nav>
+      <button onclick="showSection('portfolio')">Portfolio</button>
+      <button onclick="showSection('todo')">To-Do App</button>
+      <button onclick="showSection('products')">Products</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="content-section active">
+      <h2>👨‍💻 About Me</h2>
+      <div class="card colorful">
+        <h3>About Me</h3>
+        <p>Hello! I'm P.Sushma, a web developer passionate about building responsive, user-friendly websites and applications.</p>
+        <p><strong>Skills:</strong></p>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          
+        </ul>
+      </div>
+
+      
+      <div class="card colorful">
+        <h3>📬 Contact</h3>
+        <p><strong>Email:</strong> <a href="mailto:your.email@example.com">poolasushma18@gmail.com</a></p>
+        <p><strong>Phone:</strong> +123-456-7890</p>
+      </div>
+    </section>
+
+    <!-- To-Do App Section -->
+    <section id="todo" class="content-section hidden">
+      <h2>📝 To-Do List App</h2>
+      <input type="text" id="todo-input" placeholder="Add a task..." />
+      <button onclick="addTodo()">Add</button>
+      <ul id="todo-list"></ul>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="content-section hidden">
+      <h2>🛍 Product Listing</h2>
+      <div class="filters">
+        <select id="category-filter" onchange="filterProducts()">
+          <option value="all">All Categories</option>
+          <option value="books">Books</option>
+          <option value="tech">Tech</option>
+        </select>
+        <select id="sort-by" onchange="sortProducts()">
+          <option value="default">Sort by</option>
+          <option value="price">Price</option>
+          <option value="rating">Rating</option>
+        </select>
+      </div>
+      <div id="product-list" class="product-list"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
